@@ -1,0 +1,16 @@
+model: ../yolo11n_train_v3_datachanged_2/weights/best.pt
+device: "0"
+imgsz: 640
+conf: 0.25
+backend: dshow
+source: 0
+width: 1280
+height: 720
+fps: 30
+half: true
+fourcc: MJPG
+save: false
+save_txt: false
+classes: null
+name: null
+buffer_size: 1
