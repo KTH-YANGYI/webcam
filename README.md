@@ -38,33 +38,7 @@ model: path/to/your/best.pt
 python scripts/run_webcam.py --model path\to\your\best.pt
 ```
 
-## 4. 先检查环境
-
-```powershell
-python scripts/env_check.py
-```
-
-如果这里过不去，先不要继续跑摄像头。
-
-## 5. 探测摄像头索引
-
-```powershell
-python scripts/camera_probe.py --max-index 5 --write-json
-```
-
-如果想直接看预览：
-
-```powershell
-python scripts/camera_probe.py --max-index 5 --preview --write-json
-```
-
-Windows 下通常优先试：
-
-```text
-dshow -> msmf -> auto
-```
-
-## 6. 运行检测
+## 4. 运行检测
 
 默认运行：
 
@@ -92,14 +66,12 @@ python scripts/run_webcam.py --source 1 --backend dshow --imgsz 512
 
 预览窗口里按 `q` 退出。
 
-## 7. 最短流程
+## 5. 最短流程
 
 ```powershell
 cd webcam_app
 conda activate yolo-webcam
-python scripts/env_check.py
-python scripts/camera_probe.py --max-index 5 --write-json
 python scripts/run_webcam.py --source 1 --backend dshow
 ```
 
-把最后一条命令里的 `1` 换成你实际探测到的摄像头索引。
+把 `1` 换成你自己的摄像头索引。
